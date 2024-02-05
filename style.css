@@ -1,0 +1,528 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:monospace;
+}   
+
+.banner {
+    width: 100%;
+    height: 100vh;
+    background: green;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("Background.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+nav {
+    background-color: black;    
+    background-blend-mode: lighten;
+
+}
+.active{
+    width: 20%;
+    height: 20vh;
+}
+
+nav ul{ 
+    float: right;
+    margin-right: 20px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 140px;
+    margin: 0 0px;
+}
+
+nav ul li a{
+    color: white;
+    font-size: 20px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+a.active,a:hover{
+    background: #ffffff;
+    font-family: fantasy;
+    color: black;
+    transition: 0.4s;
+}
+.checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;   
+    line-height: 80px;
+}
+
+
+.introduction{
+    color: white; /* Set text color to white */
+    background-color: transparent; /* Make background transparent */
+    text-align: center; /* Align text to center */
+    font-size: 40px;
+    padding: 20px; /* Add padding for better visibility */
+    text-shadow: 2px 2px 4px rgb(242, 255, 0); /* Add text shadow for better visibility */
+    position: relative; /* Ensure position is relative for z-index to work */
+    z-index: 1;
+}
+
+@keyframes cursor {
+    50% {border-color: transparent;}
+}
+
+@keyframes typing {
+    from {width: 0}
+}
+.checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;   
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+@media(max-width:952){
+    label.logo{
+        font-size: 30px;
+        padding-left: 50px;
+    }
+    nav ul li a{
+        font-size: 16px;
+    }
+}
+@media (max-width:858px){
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed; /* Fixed positioning to keep it in place */
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        top: 10px;
+        left: -100%; /* Off-screen initially */
+        text-align: center;
+        transition: all .5s;
+        z-index: 999; /* Ensure the menu is above other elements */
+    }
+    nav ul li{
+        display: block;
+        margin: auto;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    a:hover,a.active{
+        background: none;
+        color: #0082e6;
+    }
+    #check:checked ~ ul{
+        left: 0%;
+    }
+}
+.introduction {
+    animation: transitionIn 2s
+}
+@keyframes transitionIn {
+    from {
+            
+            opacity: 0;
+            transform: rotateX(-20deg);
+            transform: translateX(-20px)
+            
+    }
+
+    to {
+        opacity: 1;
+        transform: rotateX(0deg);
+        transform: translateX(0px)
+    
+    }
+}
+
+.yesbtn {
+    font-family: monospace;
+    margin-top: 50px;
+    background-color: gray;
+    color: black;
+    font-size: 40px;
+    padding: 7px 13px;
+    border-radius: 10px;
+    border-color: black;
+    text-transform: uppercase;
+}   
+
+.yesbtn:hover {
+    font-size: 100px;   
+    color: white;   
+    transition: background-color 2s,font-size 0.75s;
+    background-color: greenyellow;
+    border-color: white;
+    border-radius: 40px;
+    border-width: 10px;
+}
+
+
+
+.budgethead {
+    margin-top:40px;
+    font-size: 40px;    
+    color: yellow;
+}
+
+.wrapper {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    color:black;
+    margin-right: auto;
+    padding:20px;
+    background-size: 80px;
+    border-radius: 40px;
+    background-color:whitesmoke
+}
+
+.wrapper {
+    /*This part is important for centering*/
+    display: grid;
+    place-items: center;
+  }
+  
+  .typing-demo {
+    width: 100%;
+    animation: typing 2s steps(183);
+    padding:20px;
+    white-space: wrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-family: monospace;
+    font-size: 1em; 
+  }
+  
+  @keyframes typing {
+    from {
+      width: 0
+    }
+  }
+      
+  @keyframes blink {
+    50% {
+      border-color: white
+    }
+  }
+
+@keyframes cursor {
+    0%, 100% {
+        border-right: 3px blue;
+    }
+    
+}
+
+    
+.introduction-b{
+    color: black; /* Set text color to white */
+    background-color: transparent; /* Make background transparent */
+    text-align: center; /* Align text to center */
+    font-size: 40px;
+    padding: 20px; /* Add padding for better visibility */
+    text-shadow: 2px 2px 4px rgb(255, 255, 255); /* Add text shadow for better visibility */
+    position: relative; /* Ensure position is relative for z-index to work */
+    z-index: 1;
+}
+.introduction-b {
+    animation: transitionIn 2s
+}
+
+.budgetbullet {
+    color: rgb(255, 255, 255);
+    font-family: Arial, Helvetica, sans-serif;  
+    font-size: 30px;
+    margin-top: 100px;
+    background:black;
+    padding:20px;
+    margin-left: 10px; 
+    padding-left: 100px; 
+    background-size: 80px;
+    border-radius: 40px;
+}   
+
+.wrapper2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    color:rgb(255, 0, 0);           
+    margin-right: auto;     
+    padding:20px;
+    margin-left: 10px; 
+    padding-left: 100px; 
+    background-size: 80px;
+    border-radius: 40px;    
+    background-color: rgb(51, 51, 51);
+}
+
+.wrapper2 { 
+    /*This part is important for centering*/
+    display: grid;
+    place-items: center;
+  }
+
+.Gif1 {
+    size:30%;
+}
+
+.hello1 {
+    font-size: 35px;
+    font-family: Arial, Helvetica, sans-serif;
+    color:white;
+}
+
+.hello2 {
+    font-size: 35px;
+    font-family: Arial, Helvetica, sans-serif;
+    color:white;
+}
+
+.hello3 {
+    font-size: 35px;
+    font-family: Arial, Helvetica, sans-serif;
+    color:white;
+}
+
+
+.hello4 {
+    color:red;
+}   
+
+.introduction-c{
+    color: rgb(255, 34, 34); /* Set text color to white */
+    background-color: transparent; /* Make background transparent */
+    text-align: center; /* Align text to center */
+    font-size: 40px;
+    padding: 20px; /* Add padding for better visibility */
+    text-shadow: 2px 2px 4px rgb(255, 247, 0); /* Add text shadow for better visibility */
+    position: relative; /* Ensure position is relative for z-index to work */
+    z-index: 1;
+}
+.introduction-c {
+    animation: transitionIn 2s
+}
+.Gif3 {
+    size:40px;
+}
+
+.budgetbullet2 {
+    color: rgb(255, 255, 255);
+    font-family: Arial, Helvetica, sans-serif;  
+    font-size: 30px;
+    position: relative;
+   background-color: rgb(51, 51, 51);
+    padding:20px;
+    margin-left: 30px; 
+    padding-left: 300px; 
+    padding-bottom:40px;
+    margin-right: 50px;
+    background-size: 80px;
+    border-radius: 40px;
+    margin-bottom: 40px;
+    border-bottom: 20px;
+}   
+
+.budgetbullet3 {
+    color: rgb(0, 0, 0);
+    font-family: Arial, Helvetica, sans-serif;  
+    font-size: 50px;
+    padding-left:20px;
+    background:rgb(255, 255, 255);
+    margin-bottom:300px;
+    margin:auto;
+    border-radius: 40px;
+}
+
+a {
+    color: rgb(255, 255, 255); /* Change 'blue' to the color you prefer */
+}
+
+.hello5 {
+    font-family: fantasy;
+    color: rgb(0, 128, 255);
+}
+
+
+.meme {
+    font-family: monospace;
+    color: black;
+    font-size: 40px;
+    padding: 7px 13px;
+    border-radius: 40px;
+    border-color: black;
+    text-transform: uppercase;
+}
+
+.meme:hover {
+    font-size: 100px;   
+    color: greenyellow;   
+    transition: background-color 2s,font-size 0.75s;
+    background:none;
+    border-radius: 40px;
+    border-width: 10px;
+}
+
+#feedbackdiv {
+    font-size: 30px;
+    color: aliceblue;
+    background:none;
+    font-family: fantasy;
+    background: grey;
+    border-radius: 30px;
+    margin-right: auto;
+    padding-left: 30px;
+    margin-right: 200px;
+}
+.meme2 {
+    font-family: monospace;
+    color: black;
+    font-size: 40px;
+    padding: 7px 13px;
+    border-radius: 40px;
+    border-color: black;
+    text-transform: uppercase;
+}
+
+.meme2:hover {
+    font-size: 100px;   
+    color: red;   
+    transition: background-color 2s,font-size 0.75s;
+    background:none;
+    border-radius: 40px;
+    border-width: 10px;
+}
+
+
+
+.bookdesc {
+    color:whitesmoke;
+    font-size: 20px;
+    background-color:grey;
+    margin-right: 800px;
+    padding-left:30px;
+}       
+.bookdesc2 {
+    color:rgb(255, 0, 0);
+    font-size: 20px;
+    background-color:grey;
+    margin-right: 800px;
+    padding-left:30px;
+}       
+
+.book2 img {
+    margin-top: 60px;
+    border-radius: 40px;
+}
+
+.book2 img:hover {
+    transform: translateY(-25px);    
+    transition: 1s;
+    background-color: white;
+        
+}
+
+
+#Copyright {
+    font-family: fantasy;
+    color:goldenrod;
+}
+
+.introduction2{
+    color: rgb(198, 165, 0); /* Set text color to white */
+    background-color: transparent; /* Make background transparent */
+    text-align: center; /* Align text to center */
+    font-size: 40px;
+    padding: 20px; /* Add padding for better visibility */
+    text-shadow: 2px 2px 4px rgb(242, 255, 0); /* Add text shadow for better visibility */
+    position: relative; /* Ensure position is relative for z-index to work */
+    z-index: 1;
+}
+
+.introduction2 {
+    animation: transitionIn 4s
+}
+
+
+.bg3 img {
+    margin-top: 60px;
+    border-radius: 40px;
+    filter: grayscale(100%); /* Add grayscale value */
+}
+
+.bg3 img:hover {
+    transform: translateY(-25px);    
+    transition: 1s;
+    filter: grayscale(0%);
+    background-color: white;
+}
+
+.paragraph {
+    background-color: antiquewhite;
+    border-radius: 30px;
+    padding:30px;
+}
+
+.paragraph2 {
+    color: rgb(255, 241, 170); /* Set text color to white */
+    background-color: transparent; /* Make background transparent */
+    text-align: center; /* Align text to center */
+    font-size: 40px;
+    padding: 20px; /* Add padding for better visibility */
+    text-shadow: 2px 2px 4px rgb(4, 255, 0); /* Add text shadow for better visibility */
+    position: relative; /* Ensure position is relative for z-index to work */
+    z-index: 1;
+}
+
+.yesbtn2 {
+    font-family: monospace;
+    margin-top: 50px;
+    background-color: gray;
+    color: black;
+    font-size: 20px;
+    padding: 7px 13px;
+    border-radius: 10px;
+    border-color: black;
+    text-transform: uppercase;
+}   
+
+.yesbtn2:hover {
+    font-size: 40px;   
+    color: white;   
+    transition: background-color 2s,font-size 0.75s;
+    background-color: greenyellow;
+    border-color: white;
+    border-radius: 40px;
+    border-width: 10px;
+    margin-bottom: 20px;
+}
+
+.introductionc{
+    color: white; /* Set text color to white */
+    background-color: transparent; /* Make background transparent */
+    text-align: center; /* Align text to center */
+    font-size: 20px;
+    padding: 20px; /* Add padding for better visibility */
+    text-shadow: 2px 2px 4px rgb(242, 255, 0); /* Add text shadow for better visibility */
+    position: relative; /* Ensure position is relative for z-index to work */
+    z-index: 1;
+}
+
+.social img {
+    margin-top: 60px;
+    border-radius: 40px;
+    filter:grayscale(100);
+}
+
+.social img:hover {
+    transform: translateY(-15px);    
+    transition: 1s;
+    filter:grayscale(0);
+        
+}
